@@ -1,0 +1,134 @@
+/* Window */
+.window {
+	position: absolute;
+	border-style: solid;
+	border-width: 2px 0.5px;
+	border-color: #F3F3F3 transparent;
+	min-width: 300px;
+	visibility: hidden;
+	text-transform: uppercase;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.window.thin_border {
+	padding: 2px;
+}
+
+.window.moving,
+.window.moving>.title {
+	opacity: 0.5;
+}
+
+.window>.title {
+
+	/* Position */
+	position: absolute;
+	top: -2px;
+	left: 0;
+	transform: translateY(-100%);
+
+	/* Style */
+	visibility: visible;
+	color: #F3F3F3;
+	background-color: black;
+	border-radius: 2px 2px 0 0;
+	padding: 7px;
+	clip-path: inset(0px 100% 0px 0px);
+}
+
+.window>.title:before,
+.window>.title:after {
+	float: left;
+	line-height: 19px;
+}
+
+.window>.title.red,
+.window>.title.red:before {
+	color: red;
+}
+
+.window>.title.red:before {
+	content: '\0025BD';
+	margin-right: 2px;
+	font-size: 21px;
+}
+
+.window>.title.red:after {
+	content: '///';
+	color: #F3F3F3;
+	margin-right: 5px;
+	font-size: 14px;
+}
+
+.window>.content {
+	padding: 5px 10px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	color: #F3F3F3;
+	overflow: auto;
+	max-height: 0;
+	transition: max-height 0.5s;
+	white-space: pre;
+}
+
+.window>.content span {
+	display: inline-block;
+
+	/* opacity: 0; BUG */
+	transition: opacity 0.3s;
+}
+
+.window>.content span:not(.title) {
+	display: block;
+	line-height: 1.2;
+}
+
+.window>.content span.red {
+	color: #F3F3F3;
+	background-color: red;
+}
+
+.window>.content span.redText {
+	color: red;
+}
+
+.window>.content .title {
+	color: black;
+	background-color: #F3F3F3;
+	border-radius: 1px;
+	padding: 3px 5px 3px 5px;
+}
+
+.window>.content .title.red {
+	box-shadow: 0 0 5px red;
+}
+
+.window>.content>.title {
+	margin: 12px 0;
+}
+
+.window>.content .data {
+	background-color: black;
+	color: #F3F3F3;
+	padding: 3px 5px 3px 5px;
+}
+
+.window>.content .inline {
+	text-align: right;
+	margin: 7px 0;
+}
+
+.window>.content .inline span:first-child {
+	float: left;
+}
+
+.window>.content .inline span {
+	display: inline-block;
+}
+
+.window>.content .inline span:not(:first-child) {
+	margin-left: 5px;
+}

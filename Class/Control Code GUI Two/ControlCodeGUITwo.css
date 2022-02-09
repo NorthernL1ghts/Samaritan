@@ -1,0 +1,22 @@
+/* Control Code GUI Two */
+#controlCodeGUITwo {
+	position: absolute;
+	top: 16.5em;
+	left: 6.6em;
+	font-family: 'MagdaClean';
+	letter-spacing: 0.5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+body.night #controlCodeGUITwo {
+	color: #F3F3F3;
+}
+
+#controlCodeGUITwo a {
+	color: inherit;
+}
+
+#controlCodeGUITwo a:focus {
+	color: black;
+}

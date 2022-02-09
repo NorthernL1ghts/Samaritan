@@ -1,0 +1,22 @@
+/* Control Code Status */
+#ControlCodeStatus {
+	position: absolute;
+	bottom: 0.99em;
+	right: 4em;
+	font-family: 'MagdaClean';
+	letter-spacing: 0.5px;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+body.night #ControlCodeStatus {
+	color: #F3F3F3;
+}
+
+#ControlCodeStatus a {
+	color: inherit;
+}
+
+#ControlCodeStatus a:focus {
+	color: black;
+}

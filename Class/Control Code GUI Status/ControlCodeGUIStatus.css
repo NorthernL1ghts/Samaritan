@@ -1,0 +1,22 @@
+/* Control Code GUI Status */
+#controlCodeGUIStatus {
+	position: absolute;
+	top: 14.6em;
+	left: 6.6em;
+	font-family: 'MagdaClean';
+	letter-spacing: 0.5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+body.night #controlCodeGUIStatus {
+	color: #F3F3F3;
+}
+
+#controlCodeGUIStatus a {
+	color: inherit;
+}
+
+#controlCodeGUIStatus a:focus {
+	color: black;
+}

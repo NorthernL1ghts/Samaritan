@@ -1,0 +1,22 @@
+/* Admin Control Connectivity Status */
+#adminControlStatus {
+   position: absolute;
+   top: 16.5em;
+   left: 13.5em;
+   font-family: 'MagdaClean';
+   letter-spacing: 0.5px;
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+body.night #adminControlStatus {
+   color: #F3F3F3;
+}
+
+#adminControlStatus a {
+   color: inherit;
+}
+
+#adminControlStatus a:focus {
+   color: black;
+}

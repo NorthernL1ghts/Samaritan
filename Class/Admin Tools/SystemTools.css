@@ -1,0 +1,22 @@
+/* System Clock, timer, countdown */
+#clock .content,
+#timer .content,
+.countdown .content,
+.content>.countdown {
+	font-size: 1.8em;
+}
+
+#clock .content,
+#timer .content,
+.countdown .content {
+	text-align: center;
+}
+
+.countdown.negative {
+	color: red;
+}
+
+.countdown.negative:before {
+	content: '-';
+	padding-right: 3px;
+}

@@ -1,0 +1,22 @@
+/* Admin Control Connectivity */
+#adminControl {
+   position: absolute;
+   top: 15.5em;
+   left: 13.5em;
+   font-family: 'MagdaClean';
+   letter-spacing: 0.5px;
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+body.night #adminControl {
+   color: #F3F3F3;
+}
+
+#adminControl a {
+   color: inherit;
+}
+
+#adminControl a:focus {
+   color: black;
+}

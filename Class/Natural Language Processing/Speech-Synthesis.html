@@ -1,0 +1,33 @@
+<script>
+    // Speech Synthesis and Natural Language Processing.
+    let status = 0;
+    let recognition = new webkitSpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+    recognition.onresult = event => {
+        let result = event.results[event.results.length - 1];
+        let sentence = result[0].transcript;
+        nlp(sentence, [], result.isFinal);
+    };
+    recognition.onerror = err => {
+        if(err.error !== 'no-speech'){}
+        switch(err.error){
+            case 'network':
+                status = 2;
+                alert(`Voice recongition won't work unless you use Google's official Chrome browser.`);
+                break;
+            case 'no-speech':
+                break;
+            default:
+                console.log(err);
+        }
+    };
+    recognition.onend = () => { if(status === 1) recognition.start(); };
+    recognition.onstart = () => {
+        if(status === 1) return;
+        status = 1;
+        wrapper.init();
+    };
+    recognition.start();
+ </script>
