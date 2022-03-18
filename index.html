@@ -5,12 +5,21 @@
       <link rel="stylesheet" type="text/css" href="index.css">
       <link href="img/icon.png" rel="icon" sizes="192x192">
       <title>Samaritan v.978.0.06.51</title>
-      <script defer src="js/cookie.js"></script>
-      <script defer src="js/visibility.js"></script>
-      <script defer src="js/index.js"></script>
-      <script defer src="js/processing.js"></script>
+      <script src="js/cookie.js"></script>
+      <script src="js/visibility.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/processing.js"></script>
    </head>
    <body>
+      <div id="test1">TEST</div>
+      <div id="test2">TEST</div>
+      <div id="test3">TEST</div>
+
+      <script>
+      startTimers();
+  </script>
+
+
       <!-- Create Loading Wrapper. -->
       <!-- <div id="loadingWrapper">
          <div id="progress">
@@ -62,6 +71,8 @@
          <span N="2" class="item gray">SYS</span>
          <span N="3" class="item gray">SNS</span>
       </div>
+
+  
       <!-- Control Code -->
       <div id="controlCode">
          <span N="1" class="item gray"></span>
@@ -94,17 +105,7 @@
          <p id="systemVersion">SYS.ONLINE +0092.32-A </span></p>
       </div>
       <!-- TK GUI  -->
-      <div id="TKGUI">
-         <span N="009.100.00" class="item gray"></span>
-      </div>
-      <!-- TK GUI Two -->
-      <div id="TKGUITwo">
-         <span N="009.100.00" class="item gray"></span>
-      </div>
-      <!-- TK GUI Three -->
-      <div id="TKGUIThree">
-         <span N="009.100.00" class="item gray"></span>
-      </div>
+     
       <!-- Command Terminal -->
       <div id="bottom">
          <div id="cmd" contenteditable="false">
@@ -125,7 +126,11 @@
       <div id="controlCodeStatus">
          <p id="controlCodeStatus">CTL_CODE</span></p>
       </div>
+      <div>
+         <p id="enterTarget">Enter Target:</span></p>
+     </div>
       <script>
+         
          let status = 0;
          let recognition = new webkitSpeechRecognition();
          recognition.continuous = true;
