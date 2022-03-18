@@ -1,1 +1,0 @@
-document.querySelector('#systemVersion').style.display = 'none';
