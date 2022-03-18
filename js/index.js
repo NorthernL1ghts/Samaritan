@@ -52,7 +52,7 @@ let wrapper = {
                     output.s('Hello admin what are your commands ?');
                     executive.init();
                     system.init();
-                    TKGUI.init();
+                    ToolkitMenu.init();
                     TKGUITwo.init();
                     TKGUIThree.init();
                 }, 750);
@@ -885,14 +885,194 @@ let showCommands = () => {
     });
 };
 
+// Identify Asset Admin
+let IdentifyAssetAdmin = () => {
+    sWindow.new({
+        id: 'IdentifyAssetAdmin',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'normal',
+            text: 'Function:'
+        }, {
+            type: 'data redText',
+            text: 'Admin'
+        }],
+        [{
+            type: 'normal',
+            text: 'Name:    '
+        }, {
+            type: 'data whiteText',
+            text: '[ACCESS RESTRICTED]'
+        }],
+        [{
+            type: 'normal',
+            text: 'SSN:     '
+        }, {
+            type: 'data whiteText',
+            text: '[ACCESS RESTRICTED]'
+        }],
+        [{
+            type: 'normal',
+            text: 'ALIAS:   '
+        }, {
+            type: 'data whiteText',
+            text: 'SMITH, CAMERON'
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Proxy Asset
+let IdentifyAssetProxy = () => {
+    sWindow.new({
+        id: 'IdentifyAssetProxy',
+        title: 'Asset Identified',
+        position: {
+            bottom: '700px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'normal',
+            text: 'Function:'
+        }, {
+            type: 'data whiteText',
+            text: 'Proxy'
+        }],
+        [{
+            type: 'normal',
+            text: 'Name:    '
+        }, {
+            type: 'data whiteText',
+            text: 'GARRISON, ROSS H.'
+        }],
+        [{
+            type: 'normal',
+            text: 'SSN:     '
+        }, {
+            type: 'data whiteText',
+            text: 'XXX-XX-7821'
+        }],
+        [{
+            type: 'normal',
+            text: 'POSITON:   '
+        }, {
+            type: 'data whiteText',
+            text: 'SENATOR, U.S. CONGRESS'
+        }],
+         [{
+            type: 'normal',
+            text: 'ADDRESS:   '
+        }, {
+            type: 'data whiteText',
+            text: '19102 LAMONT ST NW'
+        }],
+        [{
+           // type: 'normal',
+           // text: 'ADDRESS:   '
+        }, {
+            type: 'data whiteText',
+            text: 'WASHINGTON, DC 2001'
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Possible Threat
+let IdentifyPossibleThreat = () => {
+    sWindow.new({
+        id: 'IdentifyPossibleThreat',
+        title: 'Asset Identified',
+        position: {
+            bottom: '350px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'Possible Threat'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'GARRISON, ROSS H.'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'XXX-XX-7821'
+            }],
+            [{
+                type: 'normal',
+                text: 'POSITON:   '
+            }, {
+                type: 'data whiteText',
+                text: 'SENATOR, U.S. CONGRESS'
+            }],
+            [{
+                type: 'normal',
+                text: 'ADDRESS:   '
+            }, {
+                type: 'data whiteText',
+                text: '19102 LAMONT ST NW, WASHINGTON, DC 2001'
+            }],          
+            [{
+                type: 'normal',
+                text: 'Transgressions:   '
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'OFFICAL MISCONDUCT: 81 COUNTS'
+            }],
+            [{
+                type: 'title red',
+                text: 'BRIBE RECEIVING: 661 COUNTS'
+            }],
+            [{
+                type: 'title red',
+                text: 'CONSPIRACY TO SUBVERT THE CONSTITUTION: 21 COUNTS'
+            }],
+            [{
+                type: 'title red',
+                text: 'ABUSE OF ALCOHOL: 124 EVENTS'
+            }],
+            [{
+                type: 'data whiteText',
+                text: '                                             Analyzing_'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
 /* System Clock */
 let clock = () => {
     sWindow.new({
         id: 'clock',
         title: 'clock',
         position: {
-            top: '80px',
-            right: '50px'
+            bottom: '200px',
+            left: '120px'
         },
         customCSS: {
             minWidth: '0'
@@ -1138,14 +1318,18 @@ let nlp = (sentence, keywords = [], final) => {
         setTimeout(() => sWindow.destroy('nlp'), 2000);
     }
 };
-
 // nlp('the machine wants me to send a message to shaw', ['machine', 'shaw']); 
 
 // Control Code
 function autoRefreshDiv() {
     document.getElementById("controlCode").innerHTML = Math.floor(Math.random() * 898) + 101
 }
-setInterval(autoRefreshDiv, 1250); // Time is set in milliseconds.
+setInterval(autoRefreshDiv, 1500); // Time is set in milliseconds.
+
+function testDiv() {
+    // document.getElementById("test").innerHTML = Math.floor(Math.random() * 898) + 101 
+}
+setInterval(testDiv, 1500);
 
 // Dominant Mandate Window 
 let DominantMandate = () => {
@@ -1206,3 +1390,3286 @@ let AuxilaryMandate = () => {
         maxHeight: 335
     });
 };
+
+// Initiate Beta Test Window. 
+let InitiateBetaTest = () => {
+    sWindow.new({
+        id: 'InitiateBetaTest',
+        // title: 'Samaritan v.978.00.06.51',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'Beta Test Initiating_                    '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyPossibleTargets = () => {
+    sWindow.new({
+        id: 'IdentifyPossibleTargets',
+        title: null,
+         position: {
+            top: '440px',
+            right: 'px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'title red',
+                text: '           Possible Targets            '
+            }, {
+                type: '',
+                text: ''
+            }],
+            {
+                type: 'data redText',
+                text: 'Attempting To Identify_              '
+            },
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Load Archive Data Window.
+let LoadArchiveData = () => {
+    sWindow.new({
+        id: 'LoadArchiveData',
+        title: null,
+        position: {
+            top: '460px',
+            right: '785px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data redText',
+                text: '             NANA                '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Load Current Feeds Window.
+let LoadCurrentFeeds = () => {
+    sWindow.new({
+        id: 'LoadCurrentFeeds',
+        title: null,
+        position: {
+            top: '460px',
+            right: '785px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data redText',
+                text: '             NANA                '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Target Location Parameter Error
+let TargetNotLocatedWithinParameter = () => {
+    sWindow.new({
+        id: 'TargetNotLocatedWithinParameter',
+        title: 'Eliminate Threats to System Survival',
+        position: {
+            top: '450px',
+            right: '700px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'TARGETS NOT LOCATED WITHIN PARAMETERS            '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Analyze Last Known Coordinates Window.
+let AnalyzeLastKnownCoordinates = () => {
+    sWindow.new({
+        id: 'AnalyzeLastKnownCoordinates',
+        title: 'Eliminate Threats to System Survival',
+        position: {
+            top: '450px',
+            right: '700px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'ANALYZING_LAST KNOW COORDINATES                  '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Analyze Behavioral Simulations Window.
+let AnalyzeBehavioralSimulations = () => {
+    sWindow.new({
+        id: 'AnalyzeBehavioralSimulations',
+        title: 'Eliminate Threats to System Survival',
+        position: {
+            top: '450px',
+            right: '700px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'ANALYZING_BEHAVIORAL SIMULATIONS                 '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Analyze Traffic Patterns Window.
+let AnalyzeTrafficPatterns = () => {
+    sWindow.new({
+        id: 'AnalyzeTrafficPatterns',
+        title: 'Eliminate Threats to System Survival',
+        position: {
+            top: '450px',
+            right: '700px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'ANALYZING_TRAFFIC PATTERNS                       '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Analyze Time Elapsed Window.
+let AnalyzeTimeElapsed = () => {
+    sWindow.new({
+        id: 'AnalyzeTimeElapsed',
+        title: 'Eliminate Threats to System Survival',
+        position: {
+            top: '450px',
+            right: '700px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'ANALYZING_TIME ELAPSED                           '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Estimate Target Location Window.
+let EstimateTargetLocation = () => {
+    sWindow.new({
+        id: 'EstimateTargetLocation',
+        title: 'Eliminate Threats to System Survival',
+        position: {
+            top: '410px',
+            right: '700px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+              [{
+                type: 'data whiteText',
+                text: 'ESTIMATED LOCATION: '
+            }, {
+                type: 'title red',
+                text: 'CENTRAL NEW JERSEY'
+            }],
+               [{
+                type: 'data whiteText',
+                text: 'CERTAINTY: 86.94%                        '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Suspect Window.
+let IdentifyPossibleSuspect = () => {
+    sWindow.new({
+        id: 'IdentifyPossibleSuspect',
+        title: 'Suspect Identified',
+        position: {
+            bottom: '456px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'Henderson, Alan B.'
+            }],
+            [{
+                type: 'normal',
+                text: 'DOB:     '
+            }, {
+                type: 'data whiteText',
+                text: '03/18/84'
+            }],
+            [{
+                type: 'normal',
+                text: 'IMEI:   '
+            }, {
+                type: 'data whiteText',
+                text: '26182733972261'
+            }],
+             [{
+                type: 'normal',
+                text: 'Current Location:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.768055, -73.981926'
+            }],
+           [{
+                type: 'normal',
+                text: 'Compiling Profile_   '
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Employment'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Education'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Finanical Activity'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Public Statements'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Questionable Afflifations'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Criminal Activity'
+            }, {
+                type: '',
+                text: ''
+            }],
+              [{
+                type: 'title red',
+                text: 'Pyschological Abnormalities'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Suspect Window.
+let IdentifyDeviant = () => {
+    sWindow.new({
+        id: 'IdentifyDeviant',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'Henderson, Alan B.'
+            }],
+            [{
+                type: 'normal',
+                text: 'DOB:     '
+            }, {
+                type: 'data whiteText',
+                text: '03/18/84'
+            }],
+            [{
+                type: 'normal',
+                text: 'IMEI:   '
+            }, {
+                type: 'data whiteText',
+                text: '26182733972261'
+            }],
+             [{
+                type: 'normal',
+                text: 'Current Location:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.768055, -73.981926'
+            }],
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Diagnosis: Attention Deficit Disorder'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Consumption Of Pornagraphic Materials'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Illegal Internet Downloads'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal redText',
+                text: 'Anti-Government Statements'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Mutiple Sexual Partners'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Self-Deleting Texts'
+            }],
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title red',
+                text: 'Threat'
+            }],
+            [{
+                type: 'normal',
+                text: 'Recommendation:'
+            }, {
+                type: 'title red',
+                text: 'Track'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Assess Populace Window.
+let AssessPopulace = () => {
+    sWindow.new({
+        id: 'AssessPopulace',
+        title: 'Assess Populace',
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+            type: 'normal',
+            text: 'Deviants Identified:     '
+        }, {
+            type: 'data redText',
+            text: '19,094,447'
+        }],
+         [{
+            type: 'normal',
+            text: 'Targets For Elimination:     '
+        }, {
+            type: 'data redText',
+            text: '     1,195'
+        }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify System Threat Deviant Window.
+let IdentifySystemThreat = () => {
+    sWindow.new({
+        id: 'IdentifySystemThreat',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+          [{
+                type: 'normal',
+                text: 'Projection:'
+            }, {
+                type: 'title red',
+                text: 'Threat'
+            }],
+            [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title red',
+                text: 'Eliminate'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify System Threat Deviant Classification Error Window.
+let IdentifySystemThreatClassificationError = () => {
+    sWindow.new({
+        id: 'IdentifySystemThreatClassificationError',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+          [{
+                type: 'normal',
+                text: 'Projection:'
+            }, {
+                type: 'title red',
+                text: 'Threat'
+            }],
+            [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title red',
+                text: 'Eliminate'
+            }],
+             [{
+                type: 'data whiteText',
+                text: 'NEW DATA ACQUIRED'
+            }],
+             [{
+                type: 'data redText',
+                text: 'CLASSIFICATION ERROR'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Irrelevant System Threat Window.
+let IdentifyIrrelevantThreat = () => {
+    sWindow.new({
+        id: 'IdentifyIrrelevantThreat',
+        title: 'Irrelevant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+          [{
+                type: 'normal',
+                text: 'Projection:'
+            }, {
+                type: 'title white',
+                text: 'NON-THREAT'
+            }],
+            [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title white',
+                text: 'DISREGARD'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Irrelevant Threat Classification Error Window.
+let IdentifyIrrelevantThreatClassificationError = () => {
+    sWindow.new({
+        id: 'IdentifyIrrelevantThreatClassificationError',
+        title: 'Irrelevant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+          [{
+                type: 'normal',
+                text: 'Projection:'
+            }, {
+                type: 'title white',
+                text: 'NON-THREAT'
+            }],
+            [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title white',
+                text: 'DISREGARD'
+            }],
+             [{
+                type: 'data whiteText',
+                text: 'NEW DATA ACQUIRED'
+            }],
+             [{
+                type: 'data redText',
+                text: 'CLASSIFICATION ERROR'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Identify Threat To System Survival
+let IdentifyThreatToSystemSurvival = () => {
+    sWindow.new({
+        id: 'IdentifyThreatToSystemSurvival',
+        title: 'Identified Threat To System Survival',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Location:'
+            }, {
+                type: 'data whiteText',
+                text: 'HAJOU BUDAPEST HOTEL           '
+            }],
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: 'BUDAPEST, HUNGARY              '   
+            }],
+            [{
+                type: 'normal',
+                text: 'Mode:'
+            }, {
+                type: 'normal',
+                text: 'Tracking_                       '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyActiveAsset = () => {
+    sWindow.new({
+        id: 'IdentifyActiveAsset',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data redText',
+                text: 'Operative'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'ACTIVE ALIAS:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ROUSSEAU, MARTINE S.'
+            }],
+               [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: 'BUDAPEST, HUNGARY'
+            }],
+            [{
+                type: 'normal',
+                text: 'Mandate:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title red',
+                text: 'Eliminate Threat To System Survival  '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyActiveAssetComplete = () => {
+    sWindow.new({
+        id: 'IdentifyActiveAssetComplete',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data redText',
+                text: 'Operative'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'ACTIVE ALIAS:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ROUSSEAU, MARTINE S.'
+            }],
+               [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: 'BUDAPEST, HUNGARY'
+            }],
+            [{
+                type: 'normal',
+                text: 'Mandate:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title',
+                text: '               Complete              '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let SearchForTarget = () => {
+    sWindow.new({
+        id: 'SearchForTarget',
+        title: 'Searching For Target_',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Alias:'
+            }, {
+                type: 'data redText',
+                text: 'REESE, JOHN'
+            }],
+            [{
+                type: 'normal',
+                text: 'Projection:    '
+            }, {
+                type: 'title red',
+                text: 'THREAT'
+            }],
+            [{
+                type: 'normal',
+                text: 'Designation:     '
+            }, {
+                type: 'title red',
+                text: 'Eliminate'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let TrackAgent = () => {
+    sWindow.new({
+        id: 'TrackAgent',
+        title: 'Tracking_',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'Active Alias:   '
+            }, {
+                type: 'data whiteText',
+                text: 'WATKINS, MEGAN L.'
+            }],
+            [{
+                type: 'normal',
+                text: 'position:   '
+            }, {
+                type: 'data whiteText',
+                text: 'AGENT, D.E.A.'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyActiveAssetMode = () => {
+    sWindow.new({
+        id: 'IdentifyActiveAssetMode',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data redText',
+                text: 'Operative'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'ALIASES:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ROUSSEAU, MARTINE S.'
+            }],
+            [{
+                type: 'normal',
+                text: 'Mandate:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title red',
+                text: 'Eliminate Threat To System Survival  '
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'normal',
+                text: 'Mode:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title red',
+                text: 'Search And Destroy'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifySubjectCriminalRecord = () => {
+    sWindow.new({
+        id: 'IdentifySubjectCriminalRecord',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'WHISTLER, HAROLD'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'XXX-XX-8003'
+            }],
+            [{
+                type: 'normal',
+                text: 'OCCUPTION:   '
+            }, {
+                type: 'data whiteText',
+                text: 'PROFESSOR'
+            }],
+            [{
+                type: 'normal',
+                text: 'Criminal Record:   '
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Vandalism'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Unable to Acquire Audio Error
+let UnableToAcquireAudioError = () => {
+    sWindow.new({
+        id: 'UnableToAcquireAudioError',
+        title: null,
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'title red',
+                text: '         UNABLE TO ACQUIRE AUDIO         '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyCompetitor = () => {
+    sWindow.new({
+        id: 'IdentifyCompetitor',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'Competitor'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'MAHONEY, CLAIRE'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.8155 / -73.9185'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyImmediateThreat = () => {
+    sWindow.new({
+        id: 'IdentifyImmediateThreat',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'Immediate Threat'
+            }],
+             [{
+                type: 'normal',
+                text: 'NAME:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'DOB:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.8155 / -73.9185'
+            }],
+            [{
+                type: 'normal',
+                text: 'Criminal Record:   '
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Attempted Murder'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// Deviant Under arrest.
+let DeviantArrested = () => {
+    sWindow.new({
+        id: 'DeviantArrested',
+        title: null,
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data redText',
+                text: '/// Deviant Detained By Law Enforcement                 '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let ArrestInProgress = () => {
+    sWindow.new({
+        id: 'ArrestInProgress',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'Riley, John'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'xxx-xx-3145'
+            }],
+            [{
+                type: 'normal',
+                text: 'OCCUPTION:   '
+            }, {
+                type: 'data whiteText',
+                text: 'DETECTIVE, NYPD'
+            }],
+            [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.8155 / 73.9185'
+            }],
+             [{
+                type: '',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: '                 Arrest In Progress'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyLocationInformation = () => {
+    sWindow.new({
+        id: 'IdentifyLocationInformation',
+        title: 'Loc.A3-02',
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+             [{
+                type: 'normal',
+                text: 'Latitude:'
+            }, {
+                type: 'data whiteText',
+                text: '40.7690      '
+            }],
+            [{
+                type: 'normal',
+                text: 'Longitude:'
+            }, {
+                type: 'data whiteText',
+                text: '-73.9435     '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyPartyAffiliation = () => {
+    sWindow.new({
+        id: 'IdentifyPartyAffiliation',
+        title: null,
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'Porter, Maria'
+            }],
+            [{
+                type: 'normal',
+                text: 'Party Affiliation:    '
+            }, {
+                type: 'title red',
+                text: 'REPUBLICAN'
+            }],
+            [{
+                type: 'normal',
+                text: 'AGE:     '
+            }, {
+                type: 'data whiteText',
+                text: '45'
+            }],
+            [{
+                type: 'normal',
+                text: 'Race:   '
+            }, {
+                type: 'data whiteText',
+                text: 'White'
+            }],
+            [{
+                type: 'normal',
+                text: 'Household Income:   '
+            }, {
+                type: 'data whiteText',
+                text: '62,000'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifiedSubjectDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifiedSubjectDB',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS UNAVAILABLE]'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            },  {
+                type: 'data whiteText',
+                text: '[ACCESS UNAVAILABLE]'
+            }],
+            [{
+                type: 'normal',
+                text: 'OCCUPTION:   '
+            },{
+                type: 'data whiteText',
+                text: '[ACCESS UNAVAILABLE]'
+            }],
+             [{
+                type: 'normal',
+                text: 'LOCATION:   '
+            },{
+                type: 'data whiteText',
+                text: '[ACCESS UNAVAILABLE]'
+            }],
+            [{
+                type: 'normal',
+                text: 'Projection'
+            },{
+                type: 'title red',
+                text: '[ACCESS UNAVAILABLE]'
+            }],
+            [{
+                type: 'normal',
+                text: 'Conclusion'
+            },{
+                type: 'title red',
+                text: '[ACCESS UNAVAILABLE]'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifiedAssetDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifiedDB',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data redText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'            
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'            
+            }],
+            [{
+                type: 'normal',
+                text: 'ALIAS:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifiedAssetMandateDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifiedAssetMandateDB',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data redText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'ACTIVE ALIAS:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+               [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Mandate:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title red',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifiedAssetMandateModeDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifiedAssetMandateModeDB',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data redText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'ALIASES:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Mandate:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title red',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'normal',
+                text: 'Mode:'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title red',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifiedCompetitorDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifiedCompetitorDB',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Location:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifiedAssetProxyDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifiedAssetProxyDB',
+        title: 'Asset Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Function:'
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'POSITON:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'ADDRESS:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                // type: 'normal',
+                // text: 'ADDRESS:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let EmptyIdentifyDeviantDB = () => {
+    sWindow.new({
+        id: 'EmptyIdentifyDeviantDB',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'DOB:     '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'IMEI:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+             [{
+                type: 'normal',
+                text: 'Current Location:   '
+            }, {
+                type: 'data whiteText',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'ACCESS UNAVAILABLE'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'ACCESS UNAVAILABLE'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'ACCESS UNAVAILABLE'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal redText',
+                text: 'ACCESS UNAVAILABLE'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'ACCESS UNAVAILABLE'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'ACCESS UNAVAILABLE'
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title red',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+            [{
+                type: 'normal',
+                text: 'Recommendation:'
+            }, {
+                type: 'title red',
+                text: 'ACCESS UNAVAILABLE'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyNonRelevantDeviant = () => {
+    sWindow.new({
+        id: 'IdentifyNonRelevantDeviant',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title',
+                text: 'NON-THREAT'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'RODGERS, DOUGLAS'
+            }],
+            [{
+                type: 'normal',
+                text: 'DOB:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'LOCATION:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.710576, -73.948523'
+            }],
+            [{
+                type: 'normal',
+                text: 'Criminal Record:   '
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: 'Vandalism'
+            }],
+         
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: '',
+                text: ''
+            }],
+
+            [{
+                type: 'title red',
+                text: 'Fraud'
+            }],
+          
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyPriorityTarget = () => {
+    sWindow.new({
+        id: 'IdentifyPriorityTarget',
+        title: 'Priority Target Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'THREAT TO SYSTEM'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'LEE, SIMON'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'LOCATION:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.704695, -74.011799'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let AccessFloorPlan = () => {
+    sWindow.new({
+        id: 'AccessFloorPlan',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'ACCESSING FLOORPLAN      '
+            }],
+        [{
+            type: 'data redText',
+            text: '. ..'
+        }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let TrackingCellPhone = () => {
+    sWindow.new({
+        id: 'TrackingCellPhone',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'TRACKING CELL PHONE      '
+            }],
+        [{
+            type: 'data redText',
+            text: '. ..'
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let AcquirePriorityTarget = () => {
+    sWindow.new({
+        id: 'AcquirePriorityTarget',
+        // title: 'Samaritan v.978.00.06.51',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data redText',
+                text: 'Priority Target Acquired            '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifySubjectDiscrepancy = () => {
+    sWindow.new({
+        id: 'IdentifySubjectDiscrepancy',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:'
+            }, {
+                type: 'data whiteText',
+                text: 'Iverson, Karen'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'OCCUPTION:     '
+            }, {
+                type: 'data whiteText',
+                text: '         JORUNALIST'
+            }],
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: '   NEW YORK JOURNAL'
+            }],
+            [{
+                type: 'title red',
+                text: '             DISCREPANCY                 '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyEnemyCombatant = () => {
+    sWindow.new({
+        id: 'IdentifyEnemyCombatant',
+        title: 'Target Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'ENEMY COMBATANT'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:    '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'OCCUPTION:     '
+            }, {
+                type: 'data whiteText',
+                text: '         JORUNALIST'
+            }],
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: '   NEW YORK JOURNAL'
+            }],
+            [{
+                type: 'data redText',
+                text: '             REINFORCEMENTS DELOYED              '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let SearchForEnemyCombatant = () => {
+    sWindow.new({
+        id: 'SearchForEnemyCombatant',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+             [{
+                type: 'data redText',
+                text: 'SEARCHING FOR ENEMY COMBATANT       .. . '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let SearchForPriorityTarget = () => {
+    sWindow.new({
+        id: 'SearchForPriorityTarget',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+             [{
+                type: 'data redText',
+                text: 'PRIORITY TARGET APPROACHING LOBBY    .. . '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let CalculateTrajectory = () => {
+    sWindow.new({
+        id: 'CalculateTrajectory',
+        title: 'Calculating Trajectory_',
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+            type: 'normal',
+            text: 'Distance To Target:     '
+        }, 
+        // {
+        //     type: 'data redText',
+        //     text: '10 meters   ' // This is if you want a number with 2 digits
+        //     // text: '10 meters    ' // This is if you want a number with 3 digits
+        // },
+        {
+            type: 'data redText',
+            text: '0 meters    ' // This is if you want a number with 2 digits
+            // text: '10 meters    ' // This is if you want a number with 3 digits
+        }],
+         [{
+            type: 'normal',
+            text: 'Time To Intersect:     '
+        }, {
+            type: 'data redText',
+            text: '00:00:00.000'
+        }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let CalculateOddsOfEscapeEnemyCombatant = () => {
+    sWindow.new({
+        id: 'CalculateOddsOfEscapeEnemyCombatant',
+        title: 'Enemy Combatant',
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Designation:     '
+            }, {
+                type: 'title red',
+                text: 'ACTIVE THREAT' 
+            }],
+            [{
+                type: 'normal',
+                text: 'Odds Of Escape:     '
+            }, {
+                type: 'title red',
+                text: '   62.30%' 
+            }],
+            [{
+                type: 'normal',
+                text: 'Assessing Value _'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title',
+                text: '                        '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// calculateoddsofescapeenemycombatant
+
+let CalculateOddsOfEscapeTarget = () => {
+    sWindow.new({
+        id: 'CalculateOddsOfEscapeTarget',
+        title: 'Target',
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Designation:     '
+            }, {
+                type: 'data whiteText',
+                text: 'LEE, SIMON' 
+            }],
+            [{
+                type: 'normal',
+                text: 'Odds Of Escape:     '
+            }, {
+                type: 'title red',
+                text: '    6.92%' 
+            }],
+            [{
+                type: 'normal',
+                text: 'Assessing Value _'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title white',
+                text: '                        '
+            }],
+            [{
+                 type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'title red',
+                text: '     PRIORITY TARGET         '
+            }],
+            [{
+                type: '',
+               text: ''
+           }, {
+               type: '',
+               text: ''
+           }],
+           [{
+            type: '',
+           text: ''
+       }, {
+           type: '',
+           text: ''
+       }],
+                       [{
+                type: 'normal',
+                text: 'Conclusion:'
+            }, {
+                type: 'title red',
+                text: 'Eliminate'
+            }],
+            
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+// calculateoddsoftarget
+
+let IdentifySecondaryTarget = () => {
+    sWindow.new({
+        id: 'IdentifySecondaryTarget',
+        title: 'Target',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'LEE, SIMON'
+            }],
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'title whiteText',
+                text: '         SECONDARY TARGET         '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let PrioritizeTargetEnemyCombatant = () => {
+    sWindow.new({
+        id: 'PrioritizeTargetEnemyCombatant',
+        title: 'Enemy Combatant',
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'Designation:     '
+            }, {
+                type: 'title red',
+                text: 'ACTIVE THREAT' 
+            }],
+            [{
+                type: 'normal',
+                text: 'Odds Of Escape:     '
+            }, {
+                type: 'title red',
+                text: '   62.30%' 
+            }],
+            [{
+                type: 'normal',
+                text: 'Assessing Value _'
+            }],
+               [{
+                type: '',
+                text: ''
+            }, {
+                type: '',
+                text: ''
+            }],
+             [{
+                type: 'title white',
+                text: '                        '
+            }],
+
+            [{
+                type: '',
+               text: ''
+           }, {
+               type: '',
+               text: ''
+           }],
+           [{
+               type: '',
+               text: ''
+           }, {
+               type: '',
+               text: ''
+           }],
+           [{
+               type: 'title red',
+               text: '     PRIORITY TARGET         '
+           }],
+           [{
+               type: '',
+              text: ''
+          }, {
+              type: '',
+              text: ''
+          }],
+          [{
+           type: '',
+          text: ''
+      }, {
+          type: '',
+          text: ''
+      }],
+       [{
+               type: 'normal',
+               text: 'Conclusion:'
+           }, {
+               type: 'title red',
+               text: 'Eliminate'
+           }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let TargetReacquired = () => {
+    sWindow.new({
+        id: 'TargetReacquired',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: 'data redText',
+                text: 'TARGET REACQUIRED                    .. .'
+            }],
+            [{
+                type: 'title red',
+                text: '       ASSET EN ROUTE       '
+            }, {
+                type: 'data whiteText',
+                text: '00:00:16.146'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let SearchForIdentifiedTarget = () => {
+    sWindow.new({
+        id: 'SearchForIdentifiedTarget',
+        title: null,
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'data whiteText',
+            text: 'Searching For Target:'
+        }, {
+            type: 'title red',
+            text: 'SIMON, LEE'
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyTarget = () => {
+    sWindow.new({
+        id: 'IdentifyTarget',
+        title: 'Target Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title red',
+                text: 'THREAT TO SYSTEM'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'LEE, SIMON'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'LOCATION:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.704695, -74.011799'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifyIrrelevantTarget = () => {
+    sWindow.new({
+        id: 'IdentifyIrrelevantTarget',
+        title: null,
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Designation:'
+            }, {
+                type: 'title whiteText',
+                text: 'NON-THERAT'
+            }],
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'LEE, SIMON'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'LOCATION:   '
+            }, {
+                type: 'data whiteText',
+                text: '40.704695, -74.011799'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdentifySubject = () => {
+    sWindow.new({
+        id: 'IdentifySubject',
+        title: 'Subject Identified',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: 'Name:    '
+            }, {
+                type: 'data whiteText',
+                text: 'KAPINSKI, HANNAH'
+            }],
+            [{
+                type: 'normal',
+                text: 'SSN:     '
+            }, {
+                type: 'data whiteText',
+                text: '[ACCESS RESTRICTED]'
+            }],
+            [{
+                type: 'normal',
+                text: 'OCCUPTION:   '
+            }, {
+                type: 'data whiteText',
+                text: 'RESTARANT WORKER'
+            }],
+            [{
+                type: 'normal',
+                text: 'LOCATION:'
+            }, {
+                type: 'data whiteText',
+                text: '40.74436 / -73.948864'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let TrackProxy = () => {
+    sWindow.new({
+        id: 'TrackProxy',
+        title: 'Project: OPTS',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: 'data redText',
+                text: 'Tracking Proxy                       '           
+            }],
+            [{
+                type: 'normal',
+                text: 'NAME:'
+            }, {
+                type: 'data whiteText',
+                text: 'WILKINS, JARED L.'
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let PrimaryOperation = () => {
+    sWindow.new({
+        id: 'PrimaryOperation',
+        title: null,
+        position: {
+            top: '400px',
+            right: '650px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'data whiteText',
+                text: 'Primary Operations            '
+            }],
+            
+     
+        [{
+            type: 'data redText',
+            text: '. ..'
+        }],
+
+        [{
+            type: 'data redText',
+            text:  '////////// ACTIVE THREAT //////////'
+        }],
+        
+ 
+    [{
+        type: '',
+        text: ''
+    },
+    {
+        type: '',
+        text: ''
+    }],
+
+    [{
+        type: 'normal',
+        text: '- RELEVANT TO NATIONAL SECURITY'
+    }],
+    [{
+        type: '',
+        text: ''
+    }, {
+        type: '',
+        text: ''           
+    }],
+    
+    [{
+        type: 'title red',
+        text: 'BIOLOGICAL WEAPON DETECTED:          '
+    }],
+    [{
+        type: 'title red',
+        text: 'MARBUGVIRUS [MARV] - GROUP 4 PATHOGEN'
+    }],
+
+    [{
+        type: '',
+        text: ''
+    }, {
+        type: '',
+        text: ''           
+    }],
+    [{
+        type: '',
+        text: ''
+    }],
+    [{
+        type: 'title whiteText',
+        text: 'EXPORTING DATA_                      '           
+    }],
+    [{
+        type: 'data whiteText',
+        text: 'PORTING TO US GOVERNMENT OPERATIONS  '
+    }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let TrackSubject = () => {
+    sWindow.new({
+        id: 'TrackSubject',
+        title: 'Tracking Subject',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'normal',
+            text: 'Name:    '
+        }, {
+            type: 'data whiteText',
+            text: 'PORTER, MELINDA C.'
+        }],
+        [{
+            type: 'normal',
+            text: 'AGE:     '
+        }, {
+            type: 'data whiteText',
+            text: '32'
+        }],
+        [{
+            type: 'normal',
+            text: 'OCCUPTION:   '
+        }, {
+            type: 'data whiteText',
+            text: 'LEGAL SECRETARY'
+        }],
+        [{
+            type: 'normal',
+            text: 'Work Address:   '
+        }],
+        [{
+            type: 'data whiteText',
+            text: '44 W. 18TH ST, 3rd Floor, NEW YORK, NY 10011'
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let TrackSubjectCourseException = () => {
+    sWindow.new({
+        id: 'TrackSubjectCourseException',
+        title: 'Tracking Subject',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'normal',
+            text: 'Name:    '
+        }, {
+            type: 'data whiteText',
+            text: 'PORTER, MELINDA C.'
+        }],
+        [{
+            type: 'normal',
+            text: 'Exception:    '
+        },{
+            type: 'title red',
+            text: 'COURSE DEVIATION'
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let DetectAnomalySubject = () => {
+    sWindow.new({
+        id: 'DetectAnomalySubject',
+        title: 'Tracking Subject',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'normal',
+            text: 'Name:    '
+        }, {
+            type: 'data whiteText',
+            text: 'PORTER, MELINDA C.'
+        }],
+        [{
+            type: 'normal',
+            text: 'Exception:    '
+        },{
+            type: 'title red',
+            text: 'COURSE DEVIATION'
+        }],
+        [{
+            type: 'data redText',
+            text:  '/////////// ANOMALY DETECTED ///////////'
+        }],
+        [{
+            type: '',
+            text: ''
+        },
+        {
+            type: '',
+            text: ''
+        }],
+        [{
+            type: 'normal',
+            text: '- Gait Mismatch'
+        }],
+        [{
+            type: 'title red',
+            text: '      REEVALUATING IDENTIFICATION_      '
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let WarningDetectAnomaly = () => {
+    sWindow.new({
+        id: 'WarningDetectAnomaly',
+        title: 'Warning!!',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'data redText',
+            text:  '/////////// ANOMALY DETECTED ///////////'
+        }],
+        [{
+            type: '',
+            text: ''
+        },
+        {
+            type: '',
+            text: ''
+        }],
+        [{
+            type: 'normal',
+            text: '- DEVIANT BEHAVIOUR'
+        }],
+        [{
+            type: '',
+            text: ''
+        },
+        {
+            type: '',
+            text: ''
+        }],
+        [{
+            type: 'normal',
+            text: '- MISIDENTIFICATION [1]'
+        }],
+        [{
+            type: '',
+            text: ''
+        },
+        {
+            type: '',
+            text: ''
+        }],
+        [{
+            type: 'normal',
+            text: '  BIOMETRICS NOT FOUND'
+        }],
+        [{
+            type: 'title textWhite',
+            text: '  CONTACTING CLOSEST TECHNICAL SUPPORT  '
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let ProxyCompromised = () => {
+    sWindow.new({
+        id: 'ProxyCompromised',
+        title: 'Project: OPTS',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: '',
+                text: ''
+            }, {
+                type: 'data redText',
+                text: 'Tracking Proxy                       '           
+            }],
+            [{
+                type: 'normal',
+                text: 'NAME:'
+            }, {
+                type: 'data whiteText',
+                text: 'WILKINS, JARED L.'
+            }],
+            [{
+                type: 'title red',
+                text: '        OPERATION COMPROMISED        '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let DataRecovery = () => {
+    sWindow.new({
+        id: 'DataRecovery',
+        title: 'Data Recovery',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'title whiteText',
+            text: 'FILE RECONSTRUCTION ACTIVE_      '
+        }, {
+            type: '',
+            text: ''
+        }],
+        [{
+            type: '',   
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'data whiteText',
+            text: 'SCANNING UNALLOCATED SECTORS_     '
+        }],
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'data whiteText',
+            text: 'SCANNING UNALLOCATED SECTORS_     '
+        }],
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'data whiteText',
+            text: 'SCANNING TEMPORARY DIRECTORIES_   '
+        }],
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'data whiteText',
+            text: 'SCANNING SWAP FILES_              '
+        }],
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'data whiteText',
+            text: 'SCANNING REMPPAED BAD BLOCKS_     '
+        }], 
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'data whiteText',
+            text: 'INTERPOLATING MISSING DATA_       '
+        }], 
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'title WhiteText',
+            text: 'EXTRACTING FACIAL FEATURES_       '
+        }],
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+
+let DataRecoveryAdditionalTarget = () => {
+    sWindow.new({
+        id: 'DataRecoveryAdditionalTarget',
+        title: 'Data Recovery',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+        [{
+            type: 'title whiteText',
+            text: 'FILE RECONSTRUCTION ACTIVE_      '
+        }, {
+            type: '',
+            text: ''
+        }], 
+        [{
+            type: '',
+            text: ''
+        }],
+        [{
+            type: 'title WhiteText',
+            text: 'EXTRACTING FACIAL FEATURES_      '
+        }],
+      
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'title red',
+            text: 'ADDITIONAL TARGET DETECTED       '
+        }],
+        [{
+            type: '',
+            text: ''
+        }, {
+            type: '',
+            text: ' '           
+        }],
+        [{
+            type: 'normal',
+            text: 'Identity:  '
+        }, {
+            type: 'data redText',
+            text: 'Unknown'
+        }],
+        [{
+            type: 'data redText',
+            text: '         CONTACTING ADMIN         '
+        }],
+       
+    ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+
+let ContactAdministrator = () => {
+    sWindow.new({
+        id: 'ContactAdministrator',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data redText',
+                text: 'CONTACTING ADMIN         '
+            }],
+        [{
+            type: 'data redText',
+            text: '. ..'
+        }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let FacialRecognitionConfirmed = () => {
+    sWindow.new({
+        id: 'FacialRecognitionConfirmed',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: 'FACIAL RECOGNITION CONFIRMED      '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let LocateDeviantCriminalAssociates = () => {
+    sWindow.new({
+        id: 'LocateDeviantCriminalAssociates',
+        position: {
+            top: '440px',
+            right: '690px'
+        },
+        content: [{
+                type: '',
+                text: ''
+            },
+            [{
+                type: 'data whiteText',
+                text: 'LOCATING CRIMINAL ASSOCIATES           '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdenitfyUnknownDeviant = () => {
+    sWindow.new({
+        id: 'IdenitfyUnknownDeviant',
+        title: 'Deviant',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: '            KOROA, TOMAS            '
+            }],
+            [{
+                type: 'normal',
+                text: 'Location:       '
+            }, {
+                type: 'title red',
+                text: '     UNKNOWN     '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdenitfyUnknownAssociate = () => {
+    sWindow.new({
+        id: 'IdenitfyUnknownAssociate',
+        title: 'Associate',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: '           LENDFLEDER, HENDRIK P.            '
+            }],
+            [{
+                type: 'normal',
+                text: 'Status:       '
+            }, {
+                type: 'title red',
+                text: '     DECEASED     '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let IdenitfyIncarceratedAssociate = () => {
+    sWindow.new({
+        id: 'IdenitfyIncarceratedAssociate',
+        title: 'Associate',
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'normal',
+                text: ''
+            }, {
+                type: 'data whiteText',
+                text: '           RODCHENKO, KATYA            '
+            }],
+            [{
+                type: 'normal',
+                text: 'Status:       '
+            }, {
+                type: 'title whiteText',
+                text: '     INCARCERATED     '
+            }],
+            [{
+                type: 'normal',
+                text: 'Location:       '
+            }, {
+                type: 'title red',
+                text: '   RIKERS ISLAND   '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+let CameraRequestMaintenance = () => {
+    sWindow.new({
+        id: 'CameraRequestMaintenance',
+        title: null,
+        position: {
+            bottom: '725px',
+            right: '80px'
+        },
+        content: [
+            [{
+                type: 'data redText',
+                text:  '////// SURVEILLANCE INTERRUPTED //////'
+            }],
+            [{
+                type: '',
+                text: ''
+            }],
+            [{
+                type: 'normal',
+                text: 'SUSPECTED GANG ACTIVITY'
+            }],
+            [{
+                type: 'title whiteText',
+                text: '       REQUESTING MAINTENANCE_        '
+            }],
+        ],
+        forceHeight: true,
+        maxHeight: 335
+    });
+};
+
+function myFunction1() { testDiv('test1'); setTimeout(myFunction1, Math.random() * 1000) }
+function myFunction2() { testDiv2('test2'); setTimeout(myFunction2, Math.random() * 1000) }
+function myFunction3() { testDiv3('test3'); setTimeout(myFunction3, Math.random() * 1000) }
+// function myFunction4() { testDiv('test4'); setTimeout(myFunction4, Math.random() * 1000) }
+// function myFunction5() { testDiv('test5'); setTimeout(myFunction5, Math.random() * 1000) }
+function startTimers() { myFunction1(); myFunction2(); myFunction3(); }
+
+
+function padLeadingZeros(num, size) {
+    var s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function testDiv(div) {
+    const preFix = ['001'];
+    const negaFix = ['', '-'];
+    const random = Math.floor(Math.random() * preFix.length);
+    const random2 = Math.floor(Math.random() * negaFix.length);
+    document.getElementById(div).innerHTML = 
+        'TK_' + 
+        padLeadingZeros( preFix[random]  ,3) 
+        + '.' + 
+        padLeadingZeros(Math.floor(Math.random()*1000),3) 
+        + '.' + negaFix[random2] + 
+        Math.floor(Math.random()*100);
+}
+
+function testDiv2(div) {
+    const preFix = ['009'];
+    const negaFix = ['', '-'];
+    const random = Math.floor(Math.random() * preFix.length);
+    const random2 = Math.floor(Math.random() * negaFix.length);
+    document.getElementById(div).innerHTML = 
+        'TK_' + 
+        padLeadingZeros( preFix[random]  ,3) 
+        + '.' + 
+        padLeadingZeros(Math.floor(Math.random()*1000),3) 
+        + '.' + negaFix[random2] + 
+        Math.floor(Math.random()*100);
+}
+
+function testDiv3(div) {
+    const preFix = ['099'];
+    const negaFix = ['', '-'];
+    const random = Math.floor(Math.random() * preFix.length);
+    const random2 = Math.floor(Math.random() * negaFix.length);
+    document.getElementById(div).innerHTML = 
+        'TK_' + 
+        padLeadingZeros( preFix[random]  ,3) 
+        + '.' + 
+        padLeadingZeros(Math.floor(Math.random()*1000),3) 
+        + '.' + negaFix[random2] + 
+        Math.floor(Math.random()*100);
+}
+
+
+console.log('Hello there!!!');
