@@ -1,3 +1,7 @@
+[class^="poi-"], [class*=" poi-"] {font-family: 'Barlow Semi Condensed', sans-serif; text-transform: uppercase;}
+[class^="poi-block-"], [class*=" poi-block-"],
+[class^="poi-card-"], [class*=" poi-card-"] {margin: 0 15px; padding: 5px;}
+
 @font-face {
 	font-family: 'MagdaCleanMonoBold';
 	src: url('fonts/magdacleanmonobold.ttf');
@@ -260,6 +264,9 @@ body.night #hr {
 #marker.triangle:before {
 	content: '\25b2';
 	color: red;
+	animation: triangle-fading 1.2s infinite ease-in-out;
+	-moz-animation: triangle-fading 1.2s infinite ease-in-out;
+	-webkit-animation: triangle-fading 1.2s infinite ease-in-out;
 }
 
 #marker.dots:before {
@@ -446,7 +453,6 @@ body.night #executive span:before {
 }
 
 .window>.title {
-
 	/* Position */
 	position: absolute;
 	top: -2px;
@@ -1069,203 +1075,6 @@ body.night #system span:before {
 	background-color: #808080;
 }
 
-/* Toolkit Graphic User Interface */
-#TKGUI {
-	position: absolute;
-	top: 2em;
-	right: 8em;
-	font-size: 17px;
-}
-
-body.night #TKGUI {
-	color: #F3F3F3;
-}
-
-#TKGUI:before {
-	content: '';
-	position: absolute;
-	height: calc(100% - 3px);
-	border: 1.5px solid black;
-	border-right-width: 0;
-	width: 12px;
-	left: 0px;
-}
-
-body.night #TKGUI:before {
-	border-color: #F3F3F3;
-}
-
-#TKGUI span {
-	display: block;
-}
-
-#TKGUI span:before {
-	content: ''attr(N)'';
-	border-width: 0 1.5px;
-	border-color: black;
-	border-style: solid;
-	margin-right: 8px;
-	display: inline-block;
-	width: 130px;
-	text-align: center;
-}
-
-body.night #TKGUI span:before {
-	border-color: #F3F3F3;
-}
-
-#TKGUI span:first-child:before {
-	border-top-width: 1.5px;
-}
-
-#TKGUI span:last-child:before {
-	border-bottom-width: 1.5px;
-}
-
-#TKGUI span.gray:before {
-	background-color: #808080;
-}
-
-#TKGUI span.gray:before {
-	background-color: #808080;
-}
-
-#TKGUI span.gray:before {
-	background-color: #808080;
-}
-
-
-/* Toolkit Graphic User Interface */
-#TKGUIThree {
-	position: absolute;
-	top: 4.8em;
-	right: 8em;
-	font-size: 17px;
-}
-
-body.night #TKGUIThree {
-	color: #F3F3F3;
-}
-
-#TKGUIThree:before {
-	content: '';
-	position: absolute;
-	height: calc(100% - 3px);
-	border: 1.5px solid black;
-	border-right-width: 0;
-	width: 12px;
-	left: 0px;
-}
-
-body.night #TKGUIThree:before {
-	border-color: #F3F3F3;
-}
-
-#TKGUIThree span {
-	display: block;
-}
-
-#TKGUIThree span:before {
-	content: ''attr(N)'';
-	border-width: 0 1.5px;
-	border-color: black;
-	border-style: solid;
-	margin-right: 8px;
-	display: inline-block;
-	width: 130px;
-	text-align: center;
-}
-
-body.night #TKGUIThree span:before {
-	border-color: #F3F3F3;
-}
-
-#TKGUIThree span:first-child:before {
-	border-top-width: 1.5px;
-}
-
-#TKGUIThree span:last-child:before {
-	border-bottom-width: 1.5px;
-}
-
-#TKGUIThree span.gray:before {
-	background-color: #808080;
-}
-
-#TKGUIThree span.gray:before {
-	background-color: #808080;
-}
-
-#TKGUIThree span.gray:before {
-	background-color: #808080;
-}
-
-
-/* Toolkit Graphic User Interface */
-#TKGUITwo {
-	position: absolute;
-	top: 3.4em;
-	right: 8em;
-	font-size: 17px;
-}
-
-body.night #TKGUITwo {
-	color: #F3F3F3;
-}
-
-#TKGUITwo:before {
-	content: '';
-	position: absolute;
-	height: calc(100% - 3px);
-	border: 1.5px solid black;
-	border-right-width: 0;
-	width: 12px;
-	left: 0px;
-}
-
-body.night #TKGUITwo:before {
-	border-color: #F3F3F3;
-}
-
-#TKGUITwo span {
-	display: block;
-}
-
-#TKGUITwo span:before {
-	content: ''attr(N)'';
-	border-width: 0 1.5px;
-	border-color: black;
-	border-style: solid;
-	margin-right: 8px;
-	display: inline-block;
-	width: 130px;
-	text-align: center;
-}
-
-body.night #TKGUITwo span:before {
-	border-color: #F3F3F3;
-}
-
-#TKGUITwo span:first-child:before {
-	border-top-width: 1.5px;
-}
-
-#TKGUITwo span:last-child:before {
-	border-bottom-width: 1.5px;
-}
-
-#TKGUITwo span.gray:before {
-	background-color: #808080;
-}
-
-#TKGUITwo span.gray:before {
-	background-color: #808080;
-}
-
-#TKGUITwo span.gray:before {
-	background-color: #808080;
-}
-
 
 /* System Version */
 #systemVersion {
@@ -1290,7 +1099,6 @@ body.night #systemVersion {
 	color: black;
 }
 
-
 /* Control Code Status */
 #ControlCodeStatus {
 	position: absolute;
@@ -1312,4 +1120,351 @@ body.night #ControlCodeStatus {
 
 #ControlCodeStatus a:focus {
 	color: black;
+}
+
+	
+/* Enter Target: */
+#enterTarget {
+	position: absolute;
+	bottom: 3.3em;
+	/* left: 38em; - Personal Computer Font @ 70% */
+	left: 34.5em;
+	font-family: 'MagdaClean';
+	letter-spacing: 0.5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+body.night #enterTarget {
+	color: #F3F3F3;
+}
+
+#enterTarget a {
+	color: inherit;
+}
+
+#enterTarget a:focus {
+	color: black;
+}
+
+
+#test1 {
+	position: absolute;
+	top: 3.7em;
+	right: 18em;
+	font-size: 17px;
+}
+
+body.night #test1 {
+	color: #F3F3F3;
+}
+
+#test1:before {
+	content: '';
+	position: absolute;
+	height: calc(100% - 3px);
+	border: 1.5px solid black;
+	border-right-width: 1;
+	width: 155px;
+	left: -12px;
+}
+
+body.night #test1:before {
+	border-color: #F3F3F3;
+}
+
+#test1 span {
+	display: block;
+}
+
+#test1 span:before {
+	content: ''attr(N)'';
+	border-width: 0 1.5px;
+	border-color: black;
+	border-style: solid;
+	margin-right: 8px;
+	display: inline-block;
+	width: 55px;
+	text-align: center;
+}
+
+body.night #test1 span:before {
+	border-color: #F3F3F3;
+}
+
+#test1 span:first-child:before {
+	border-top-width: 1.5px;
+}
+
+#test1 span:last-child:before {
+	border-bottom-width: 1.5px;
+}
+
+#test1 span.gray:before {
+	background-color: #808080;
+}
+
+#test1 span.gray:before {
+	background-color: #808080;
+}
+
+#test1 span.gray:before {
+	background-color: #808080;
+}
+
+
+#test2 {
+	position: absolute;
+	top: 6.7em;
+	right: 18em;
+	font-size: 17px;
+}
+
+body.night #test2 {
+	color: #F3F3F3;
+}
+
+#test2:before {
+	content: '';
+	position: absolute;
+	height: calc(100% - 3px);
+	border: 1.5px solid black;
+	border-right-width: 1;
+	width: 155px;
+	left: -12px;
+}
+
+body.night #test2:before {
+	border-color: #F3F3F3;
+}
+
+#test2 span {
+	display: block;
+}
+
+#test2 span:before {
+	content: ''attr(N)'';
+	border-width: 0 1.5px;
+	border-color: black;
+	border-style: solid;
+	margin-right: 8px;
+	display: inline-block;
+	width: 55px;
+	text-align: center;
+}
+
+body.night #test2 span:before {
+	border-color: #F3F3F3;
+}
+
+#test2 span:first-child:before {
+	border-top-width: 1.5px;
+}
+
+#test2 span:last-child:before {
+	border-bottom-width: 1.5px;
+}
+
+#test2 span.gray:before {
+	background-color: #808080;
+}
+
+#test2 span.gray:before {
+	background-color: #808080;
+}
+
+#test2 span.gray:before {
+	background-color: #808080;
+}
+
+#test3 {
+	position: absolute;
+	top: 8.7em;
+	right: 18em;
+	font-size: 17px;
+}
+
+body.night #test3 {
+	color: #F3F3F3;
+}
+
+#test3:before {
+	content: '';
+	position: absolute;
+	height: calc(100% - 3px);
+	border: 1.5px solid black;
+	border-right-width: 1;
+	width: 155px;
+	left: -12px;
+}
+
+body.night #test3:before {
+	border-color: #F3F3F3;
+}
+
+#test3 span {
+	display: block;
+}
+
+#test3 span:before {
+	content: ''attr(N)'';
+	border-width: 0 1.5px;
+	border-color: black;
+	border-style: solid;
+	margin-right: 8px;
+	display: inline-block;
+	width: 55px;
+	text-align: center;
+}
+
+body.night #test3 span:before {
+	border-color: #F3F3F3;
+}
+
+#test3 span:first-child:before {
+	border-top-width: 1.5px;
+}
+
+#test3 span:last-child:before {
+	border-bottom-width: 1.5px;
+}
+
+#test3 span.gray:before {
+	background-color: #808080;
+}
+
+#test3 span.gray:before {
+	background-color: #808080;
+}
+
+#test3 span.gray:before {
+	background-color: #808080;
+}
+
+#test4 {
+	position: absolute;
+	top: 10.7em;
+	right: 18em;
+	font-size: 17px;
+}
+
+body.night #test4 {
+	color: #F3F3F3;
+}
+
+#test4:before {
+	content: '';
+	position: absolute;
+	height: calc(100% - 3px);
+	border: 1.5px solid black;
+	border-right-width: 1;
+	width: 155px;
+	left: -12px;
+}
+
+body.night #test4:before {
+	border-color: #F3F3F3;
+}
+
+#test4 span {
+	display: block;
+}
+
+#test4 span:before {
+	content: ''attr(N)'';
+	border-width: 0 1.5px;
+	border-color: black;
+	border-style: solid;
+	margin-right: 8px;
+	display: inline-block;
+	width: 55px;
+	text-align: center;
+}
+
+body.night #test4 span:before {
+	border-color: #F3F3F3;
+}
+
+#test4 span:first-child:before {
+	border-top-width: 1.5px;
+}
+
+#test4 span:last-child:before {
+	border-bottom-width: 1.5px;
+}
+
+#test4 span.gray:before {
+	background-color: #808080;
+}
+
+#test4 span.gray:before {
+	background-color: #808080;
+}
+
+#test4 span.gray:before {
+	background-color: #808080;
+}
+
+#test5 {
+	position: absolute;
+	top: 12.7em;
+	right: 18em;
+	font-size: 17px;
+}
+
+body.night #test5 {
+	color: #F3F3F3;
+}
+
+#test5:before {
+	content: '';
+	position: absolute;
+	height: calc(100% - 3px);
+	border: 1.5px solid black;
+	border-right-width: 1;
+	width: 155px;
+	left: -12px;
+}
+
+body.night #test5:before {
+	border-color: #F3F3F3;
+}
+
+#test5 span {
+	display: block;
+}
+
+#test5 span:before {
+	content: ''attr(N)'';
+	border-width: 0 1.5px;
+	border-color: black;
+	border-style: solid;
+	margin-right: 8px;
+	display: inline-block;
+	width: 55px;
+	text-align: center;
+}
+
+body.night #test5 span:before {
+	border-color: #F3F3F3;
+}
+
+#test5 span:first-child:before {
+	border-top-width: 1.5px;
+}
+
+#test5 span:last-child:before {
+	border-bottom-width: 1.5px;
+}
+
+#test5 span.gray:before {
+	background-color: #808080;
+}
+
+#test5 span.gray:before {
+	background-color: #808080;
+}
+
+#test5 span.gray:before {
+	background-color: #808080;
 }
